@@ -6,10 +6,21 @@ import 'app/routes/app_pages.dart';
 
 void main() {
   runApp(
-    GetMaterialApp(
+    MyApp(),
+  );
+}
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return  GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "Application",
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
-    ),
-  );
+      theme: ThemeData(
+        primaryColor: Colors.deepOrange
+      ),
+    );
+  }
 }
+
