@@ -1,9 +1,14 @@
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
-  //TODO: Implement HomeController
+  final _selectedIndex = 0.obs;
+  set selectedIndex(value) => this._selectedIndex.value = value;
+  get selectedIndex => this._selectedIndex.value;
 
-  final count = 0.obs;
+  onItemTapped(int index) {
+    this.selectedIndex = index; // The set method is accessed this way, you have confused it with methods.
+    update();
+  }
   @override
   void onInit() {
     super.onInit();
@@ -16,5 +21,5 @@ class HomeController extends GetxController {
 
   @override
   void onClose() {}
-  void increment() => count.value++;
+
 }

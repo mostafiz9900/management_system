@@ -2,6 +2,8 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:management_system/app/routes/app_pages.dart';
 
 class HospitalInfoView extends StatelessWidget {
   @override
@@ -19,6 +21,7 @@ class HospitalInfoView extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: GestureDetector(
                       onTap: () {
+                        Get.toNamed(Routes.LOGIN);
 
                       },
                       child: Container(
@@ -47,7 +50,7 @@ class HospitalInfoView extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: GestureDetector(
                       onTap: () {
-
+                        Get.toNamed(Routes.SIGNUP);
                       },
                       child: Container(
                         // color: Colors.blueGrey,
